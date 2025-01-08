@@ -15,7 +15,7 @@ if (!isset($_SESSION['username'])) {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Udinus Journal | Admin</title>
-    <link rel="icon" href="img/logo.png" />
+    <link rel="icon" href="img/Logo_udinus1.jpg" />
     <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
@@ -26,6 +26,7 @@ if (!isset($_SESSION['username'])) {
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
     crossorigin="anonymous"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <style> 
         #content {
             min-height: 460px;
@@ -34,7 +35,7 @@ if (!isset($_SESSION['username'])) {
 </head>
 <body>
     <!-- nav begin -->
-    <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top bg-danger-subtle">
+    <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top bg-secondary-subtle">
     <div class="container">
         <a class="navbar-brand" href="">Udinus Journal</a>
         <button
@@ -55,12 +56,19 @@ if (!isset($_SESSION['username'])) {
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="admin.php?page=article">Article</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="admin.php?page=gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.php">Homepage</a>
             </li> 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-danger fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <?= $_SESSION['username']?>
                 </a>
                 <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="admin.php?page=profile">Profil</a></li>
                     <li><a class="dropdown-item" href="logout.php">Logout</a></li> 
                 </ul>
             </li> 
@@ -89,7 +97,7 @@ if (!isset($_SESSION['username'])) {
     </section>
     <!-- content end -->
     <!-- footer begin -->
-    <footer class="text-center p-5 bg-danger-subtle">
+    <footer class="text-center p-5 bg-secondary-subtle">
     <div>
         <a href="https://www.instagram.com/udinusofficial"
         ><i class="bi bi-instagram h2 p-2 text-dark"></i
@@ -101,7 +109,7 @@ if (!isset($_SESSION['username'])) {
         ><i class="bi bi-whatsapp h2 p-2 text-dark"></i
         ></a>
     </div>
-    <div>Aubin Daffa Al Ghozy &copy; 2023</div>
+    <div>Aubin Daffa Al Ghozy &copy; 2024</div>
     </footer>
     <!-- footer end -->
     <script
